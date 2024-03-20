@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.top-bar{
+    position: fixed;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 10fr 0.4fr;
+    align-items: center;
+    z-index: 1;
+}
+.logo{
+    color: #299B63;
+    font-weight: bold;
+    font-size: large;
+}
+/* side bar*/
+.side-bar{
+    position: fixed;
+    top:60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background: #299B63;
+    overflow-x: hidden;
+}
+.side-bar ul{
+    margin-top: 20px;
+}
+.side-bar ul li{
+    width: 100%;
+    list-style: none;
+}
+
+.side-bar ul a{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.side-bar ul a i{
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+/* main charts section */
+.main{
+    position: absolute;
+    top: 60px;
+    width: calc(100% - 260px);
+    left: 260px;
+    min-height: calc(100vh-60px);
+    background: #f5f5f5;
+}
+.cards{
+    width: 100%;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px; /*change this part to change the gap bt cards */
+}
+
+.cards .card{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0,0,0,0.08);
+}
+
+.card-number{
+    font-size:35px;
+    font-weight: 500;
+    color:#299B63; 
+}
+.card-name{
+    color: #888;
+    font-weight: 600;
+}
+.icon-box i{
+    font-size: 45px;
+    color: #299B63;
+
+}
+/*charts*/
+/* .charts{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+}
+.chart{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    width:100%;
+} */
+
+/* Charts */
+.charts {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.chart {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+/* Corrected styles for the pie chart container */
+#pie-chart {
+    position: relative; /* Ensure correct positioning of legend */
+    height: 500px; /* Set height as needed */
+}
+
+#pieChart {
+    width: 100% !important; /* Ensure the chart fills its container */
+}
+
+/* Corrected legend position */
+.chart .legend {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.chart .legend li {
+    padding: 5px;
+}
+
+.chart h2{
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+}
+/*Responsiveness*/
+@media (max-width: 1115px) {
+    .side-bar {
+        width: 60px;
+    }
+    .main {
+        left: 60px; 
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 880px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .charts {
+        grid-template-columns: 1fr;
+    }
+    #pie-chart,
+    #pieChart {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-bar {
+        grid-template-columns: 1fr 3fr 0.4fr; 
+    }
+    .cards,
+    .charts {
+        grid-template-columns: 1fr; 
+    }
+    .logo {
+        font-size: 18px; 
+    }
+}
