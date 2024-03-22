@@ -28,7 +28,7 @@
               <div>Dashboard</div>
             </a>
           </li>
-          <li>
+          {% comment %} <li>
             <a href="#">
               <i class="fas fa-user-graduate"></i>
               <div>Student</div>
@@ -39,14 +39,68 @@
               <i class="fa-sharp fa-solid fa-chart-simple"></i>
               <div>Analysis</div>
             </a>
-          </li>
+          </li> {% endcomment %}
         </ul>
       </div>
       <div class="main">
         <!-- Main dashboard will go here -->
         <div class="cards">
-          <!-- Your card elements -->
-        </div>
+          <div class="card">
+              <div class="card-content">
+                  <div class="card-number">{{ lookingaway }}</div>
+                  <div class="card-name">Looking Away</div>
+              </div>
+              <div class="icon-box">
+                  <i class="fas fa-user-graduate"></i>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-content">
+                  <div class="card-number">{{ drowsy }}</div>
+                  <div class="card-name">Drowsy</div>
+              </div>
+              <div class="icon-box">
+                  <i class="fas fa-user-graduate"></i>
+              </div>
+          </div>
+          <!-- Add similar blocks for other cards -->
+          <div class="card">
+              <div class="card-content">
+                  <div class="card-number">{{ bored }}</div>
+                  <div class="card-name">Bored</div>
+              </div>
+              <div class="icon-box">
+                  <i class="fas fa-user-graduate"></i>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-content">
+                  <div class="card-number">{{ confused }}</div>
+                  <div class="card-name">Confused</div>
+              </div>
+              <div class="icon-box">
+                  <i class="fas fa-user-graduate"></i>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-content">
+                  <div class="card-number">{{ frustated }}</div>
+                  <div class="card-name">Frustated</div>
+              </div>
+              <div class="icon-box">
+                  <i class="fas fa-user-graduate"></i>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-content">
+                  <div class="card-number">{{ engaged }}</div>
+                  <div class="card-name">Engaged</div>
+              </div>
+              <div class="icon-box">
+                  <i class="fas fa-user-graduate"></i>
+              </div>
+          </div>
+      </div>
         <div class="charts">
           <div class="chart">
             <h2>Engagement Analysis</h2>
