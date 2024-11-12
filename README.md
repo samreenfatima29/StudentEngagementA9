@@ -75,7 +75,7 @@ Select the Student tab to view detailed attentiveness analysis of each student.
 - NumPy
 - Django
   
-  ### Hardware Requirements
-  - Intel Core i5 processor
-  - 64-bit Operating System
-  - 16GB RAM
+### Hardware Requirements
+- Intel Core i5 processor
+- 64-bit Operating System
+- 16GB RAM
