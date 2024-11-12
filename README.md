@@ -1,4 +1,3 @@
-# StudentEngagementA9
 # Student Engagement Analysis in Online Meetings
 
 ## Overview
